@@ -19,30 +19,30 @@ const Form = ({ getFormInfos }) => {
             <form id="form-id" onSubmit={handleSubmit}>
                 <p>
                     <label >First Name
-                        <input onChange={e => setFirstname(e.target.value)} name="firstname" required placeholder='First Name' />
+                        <input data-testid="input-firstname" onChange={e => setFirstname(e.target.value)} name="firstname" required placeholder='First Name' />
                     </label>
                 </p>
                 <p>
                     <label>Last Name
-                        <input onChange={e => setLastname(e.target.value)} name="lastname" required placeholder='Last Name' />
+                        <input data-testid="input-lastname" onChange={e => setLastname(e.target.value)} name="lastname" required placeholder='Last Name' />
                     </label>
                 </p>
                 <p>
                     <label>Age
-                        <input onChange={e => setAge(e.target.value)} name="age" step="1" min="1" type="number" required placeholder='Age' />
+                        <input data-testid="input-age" onChange={e => setAge(e.target.value)} name="age" step="1" min="1" type="number" required placeholder='Age' />
                     </label>
                 </p>
                 <p>
                     <label>Size
-                        <input onChange={e => setSize(e.target.value)} name="size" type="number" required placeholder='Size in centimeters' /> cm
+                        <input data-testid="input-size" onChange={e => setSize(e.target.value)} name="size" type="number" required placeholder='Size in centimeters' /> cm
                     </label>
                 </p>
 
                 <label>Your message :
-                    <textarea onChange={e => setMessage(e.target.value)} name="message" rows="5" cols="40" required placeholder='Your Message ...' />
+                    <textarea data-testid="textarea-message" onChange={e => setMessage(e.target.value)} name="message" rows="5" cols="40" required placeholder='Your Message ...' />
                 </label>
 
-                <br /><button type='submit'>Submit</button>
+                <br /><button data-testid="button-submit" type='submit'>Submit</button>
             </form>
         </div>
     );
